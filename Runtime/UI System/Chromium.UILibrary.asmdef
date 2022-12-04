@@ -1,0 +1,17 @@
+{
+    "name": "Chromium.UILibrary",
+    "rootNamespace": "Chromium.UILibrary",
+    "references": [
+        "Utilities",
+        "Chromium.Utilities.Animation"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -8,7 +8,23 @@ namespace Chromium.UILibrary
         [SerializeField]
         private RectTransform _boxRect;
 
+		[SerializeField]
+		private Canvas _canvas;
+
 		private Vector2 _beginDragPosition;
+
+		private void OnValidate()
+		{
+			if (!_boxRect)
+			{
+				Debug.LogError($"<color=yellow>Box Rect</color> field of {gameObject.name} should not be Empty!");
+			}
+
+			if (!_canvas)
+			{
+				Debug.LogError($"<color=yellow>Canvas</color> field of {gameObject.name} should not be Empty!");
+			}
+		}
 
 		private void Start()
 		{
@@ -30,8 +46,8 @@ namespace Chromium.UILibrary
 			var signY = Mathf.Sign(deltaY);
 
 			_boxRect.sizeDelta = new Vector2 (
-				x: Mathf.Abs(deltaX), 
-				y: Mathf.Abs(deltaY));
+				x: Mathf.Abs(deltaX) / _canvas.transform.localScale.x, 
+				y: Mathf.Abs(deltaY) / _canvas.transform.localScale.y);
 
 			_boxRect.localScale = new Vector2(signX, signY);
 		}

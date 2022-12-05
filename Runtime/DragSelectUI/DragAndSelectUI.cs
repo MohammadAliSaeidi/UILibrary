@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 namespace Chromium.UILibrary
 {
-    public class DragSelectUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class DragAndSelectUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         [SerializeField]
         private RectTransform _boxRect;

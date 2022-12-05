@@ -1,0 +1,15 @@
+{
+  "name": "com.chromium.uilibrary",
+  "version": "0.1.0",
+  "displayName": "UILibrary",
+  "description": "",
+  "unity": "2021.3",
+  "dependencies": {
+	  "com.chromium.utilities"
+  },
+  "author": {
+    "name": "MohammadAli Saeidi",
+    "email": "1saeidima@gmail.com",
+	"url": ""
+  }
+}

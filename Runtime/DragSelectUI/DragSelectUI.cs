@@ -20,7 +20,6 @@ namespace Chromium.UILibrary
 			_boxRect.gameObject.SetActive(true);
 			_boxRect.transform.position = eventData.position;
 			_beginDragPosition = eventData.position;
-			Debug.Log($"On Begine Drag: {eventData.position}");
 		}
 
 		public void OnDrag(PointerEventData eventData)
@@ -35,8 +34,6 @@ namespace Chromium.UILibrary
 				y: Mathf.Abs(deltaY));
 
 			_boxRect.localScale = new Vector2(signX, signY);
-
-			Debug.Log($"On Pointer Enter: {eventData.position}");
 		}
 
 		public void OnEndDrag(PointerEventData eventData)

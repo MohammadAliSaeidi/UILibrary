@@ -57,9 +57,9 @@ namespace Chromium.UILibrary
 			_boxRect.gameObject.SetActive(false);
 		}
 
-		public bool IsInsideRect(Vector3 position)
+		public bool IsInsideRect(Vector3 position, Camera camera)
 		{
-			if (_boxRect.rect.Contains(new Vector2(position.x, position.z)))
+			if (_boxRect.rect.Contains(camera.WorldToScreenPoint(position)))
 				return true;
 
 			return false;

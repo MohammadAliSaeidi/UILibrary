@@ -12,6 +12,7 @@ namespace Chromium.UILibrary
 		private Canvas _canvas;
 
 		private Vector2 _beginDragPosition;
+		private Rect _rect;
 
 		private void OnValidate()
 		{
@@ -59,6 +60,13 @@ namespace Chromium.UILibrary
 
 		public bool IsInsideRect(Vector3 position, Camera camera)
 		{
+			_rect.Set(x: _boxRect.position.x, 
+				y: _boxRect.position.y, 
+				width: _boxRect.rect.width, 
+				height: _boxRect.rect.height);
+
+			Debug.Log("rect: " + _rect.ToString());
+
 			if (_boxRect.rect.Contains(camera.WorldToScreenPoint(position)))
 				return true;
 

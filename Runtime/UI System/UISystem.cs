@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UILibrary
+namespace Chromium.UILibrary
 {
 	public abstract class UISystem : MonoBehaviour
 	{

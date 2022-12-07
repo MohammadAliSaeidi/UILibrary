@@ -1,4 +1,4 @@
-﻿namespace UILibrary
+﻿namespace Chromium.UILibrary
 {
 	internal enum ScreenState
 	{

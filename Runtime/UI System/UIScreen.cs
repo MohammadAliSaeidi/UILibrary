@@ -25,19 +25,22 @@ namespace Chromium.UILibrary
 		#region Events
 
 		[Header("Events")]
-		internal UnityEvent OnScreenStart = new UnityEvent();
-		internal UnityEvent OnScreenClose = new UnityEvent();
+		public UnityEvent OnScreenStart = new();
+		public UnityEvent OnScreenClose = new();
 
 		#endregion
 
-		[SerializeField] protected Transform _content;
+		[SerializeField] 
+		protected Transform _content;
 
 		[Tooltip("will override previous screen when it is not null")]
-		[SerializeField] internal UIScreen OverridePrevScreen;
+		public UIScreen OverridePrevScreen;
+
 		[Tooltip("will override show animation speed when it is higher than \'0\'")]
-		[SerializeField] internal float OverrideShowAnimSpeed;
+		public float OverrideShowAnimSpeed;
+
 		[Tooltip("will override hide animation speed when it is higher than \'0\'")]
-		[SerializeField] internal float OverrideHideAnimSpeed;
+		public float OverrideHideAnimSpeed;
 
 		[Space(10)]
 		public float DelayBeforeStartingScreen = 0;
@@ -47,9 +50,9 @@ namespace Chromium.UILibrary
 		[Header("Screen Content Deactivation")]
 		[Tooltip("Deactivates the \"Content\" gameobject under the screen for better performance")]
 		public bool DeactivateContentOnHide = true;
-
-		internal ScreenState ScreenState { get; private set; }
 		public ScreenType screenType;
+
+		protected ScreenState ScreenState;
 		protected Dictionary<AnimatorState, string> AnimatorStates = new Dictionary<AnimatorState, string>();
 
 		#endregion

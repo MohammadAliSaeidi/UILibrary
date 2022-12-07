@@ -1,6 +1,6 @@
 ﻿namespace Chromium.UILibrary
 {
-	internal enum ScreenState
+	public enum ScreenState
 	{
 		IsBeingClosed,
 		Closed,

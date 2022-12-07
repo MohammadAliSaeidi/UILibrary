@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UIManager
+namespace UILibrary
 {
 	public abstract class UISystem : MonoBehaviour
 	{

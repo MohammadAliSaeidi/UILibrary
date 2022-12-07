@@ -1,4 +1,4 @@
-﻿namespace UIManager
+﻿namespace UILibrary
 {
 	public partial class UIScreen
 	{

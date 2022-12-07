@@ -1,4 +1,4 @@
-﻿namespace UIManager
+﻿namespace UILibrary
 {
 	internal enum ScreenState
 	{

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Chromium.Utilities.Animation;
 
-namespace UIManager
+namespace UILibrary
 {
 	[RequireComponent(typeof(Animator))]
 	[RequireComponent(typeof(CanvasGroup))]

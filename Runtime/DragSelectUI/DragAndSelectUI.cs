@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 namespace Chromium.UILibrary
 {
-	public class DragAndSelectUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+	public class DragAndSelectUI : MonoBehaviour
 	{
 		[SerializeField]
 		private RectTransform _boxRect;
@@ -32,17 +32,17 @@ namespace Chromium.UILibrary
 			_boxRect.gameObject.SetActive(false);
 		}
 
-		public void OnBeginDrag(PointerEventData eventData)
+		public void OnBeginDrag(Vector2 pointerPosition)
 		{
 			_boxRect.gameObject.SetActive(true);
-			_boxRect.transform.position = eventData.position;
-			_beginDragPosition = eventData.position;
+			_boxRect.transform.position = pointerPosition;
+			_beginDragPosition = pointerPosition;
 		}
 
-		public void OnDrag(PointerEventData eventData)
+		public void OnDrag(Vector2 pointerPosition)
 		{
-			var deltaX = eventData.position.x - _beginDragPosition.x;
-			var deltaY = eventData.position.y - _beginDragPosition.y;
+			var deltaX = pointerPosition.x - _beginDragPosition.x;
+			var deltaY = pointerPosition.y - _beginDragPosition.y;
 			var signX = Mathf.Sign(deltaX);
 			var signY = Mathf.Sign(deltaY);
 
@@ -53,7 +53,7 @@ namespace Chromium.UILibrary
 			_boxRect.localScale = new Vector2(signX, signY);
 		}
 
-		public void OnEndDrag(PointerEventData eventData)
+		public void OnEndDrag()
 		{
 			_boxRect.gameObject.SetActive(false);
 		}
